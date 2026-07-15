@@ -1,0 +1,8 @@
+{
+  "name": "CampusVault",
+  "description": "AI-Powered Smart Learning Platform for Engineering and Diploma students, featuring study materials, previous year papers, quizzes, and personalized learning via Vault AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
