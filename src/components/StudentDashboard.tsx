@@ -204,7 +204,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
     setAiLoading(true);
 
     try {
-      const response = await fetch('/api/ai/action', {
+      const response = await fetch('https://campusvault-backend-3.onrender.com/api/ai/action', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -278,8 +278,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
     setCurrentQuestionIndex(0);
 
     try {
-      const response = await fetch('/api/ai/generate-quiz', {
-        method: 'POST',
+const response = await fetch('https://campusvault-backend-3.onrender.com/api/ai/generate-quiz', {        method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           subject,
