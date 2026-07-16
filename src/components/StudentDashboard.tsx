@@ -204,15 +204,19 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
     setAiLoading(true);
 
     try {
-      const response = await fetch("https://campusvault-backend-2.onrender.com/api/ai/action", ...), {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          actionType: type,
-          prompt: textInput
-        })
-      });
-
+      const response = await fetch(
+  "https://campusvault-backend-2.onrender.com/api/ai/action",
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      actionType: type,
+      prompt: textInput,
+    }),
+  }
+);
       const data = await response.json();
       if (data.error) {
         throw new Error(data.error);
